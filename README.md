@@ -1,79 +1,91 @@
-# DB_5786_1716_5234
-# Hospital Management System – Billing & Finance Division
+# מערכת ניהול בית חולים – מחלקת חיוב וכספים
 
-## Submitted by:
+## הוגש על ידי:
+
 Hallel Ochana
 Chen Afuta
 
-## System:
+## מערכת:
+
 Hospital Management System
 
-## Selected Unit:
+## יחידה נבחרת:
+
 Billing & Finance Division
 
-## Table of Contents
-1. Introduction
-2. System Screens (AI Generated)
-3. ERD Diagram
-4. DSD Diagram
-5. Design Decisions
-6. Data Insertion Methods
-7. Backup and Restore
+## תוכן עניינים
 
-## Introduction
-The system is designed to manage hospital billing and financial operations.
+1. מבוא
+2. מסכי המערכת (נוצרו באמצעות AI)
+3. תרשים ERD
+4. תרשים DSD
+5. החלטות תכנון
+6. שיטות הזנת נתונים
+7. גיבוי ושחזור
 
-It stores data related to invoices, payments, refunds, insurance claims, and billing staff.
+## מבוא
 
-The main functionalities include:
-- Creating and managing invoices
-- Tracking invoice items and services
-- Recording payments and refunds
-- Managing insurance claims
-- Assigning billing staff roles
+המערכת מיועדת לניהול תהליכי החיוב והפעילות הפיננסית בבית החולים.
 
-## System Screens (AI Generated)
+המערכת מנהלת נתונים הקשורים לחשבוניות, תשלומים, החזרים כספיים, תביעות ביטוח ועובדי מחלקת החיוב.
+
+הפונקציונליות המרכזית כוללת:
+
+* יצירה וניהול של חשבוניות
+* ניהול פריטי חשבונית ושירותים
+* תיעוד תשלומים והחזרים כספיים
+* ניהול תביעות ביטוח
+* ניהול תפקידי עובדי מחלקת החיוב
+
+## מסכי המערכת (נוצרו באמצעות AI)
+
 https://ai.studio/apps/ff1c6d46-d62f-40b6-a2b2-a5877b81b10b
-### Invoice Management
 
-![Invoice](stage_1\SystemSpecification\screen1.png)
+### ניהול חשבוניות
 
-### Invoice Details
-![Invoice Details](stage_1\SystemSpecification\screen2.jpeg)
+![Invoice](stage_1/SystemSpecification/screen1.png)
 
-### Payments and Refunds
-![Payments](stage_1\SystemSpecification\screen4.jpeg)
+### פרטי חשבונית
 
-### Insurance Claims and Billing Staff
-![Claims](stage_1\SystemSpecification\screen3.jpeg)
+![Invoice Details](stage_1/SystemSpecification/screen2.jpeg)
 
-## ERD Diagram
+### תשלומים והחזרים כספיים
+
+![Payments](stage_1/SystemSpecification/screen4.jpeg)
+
+### תביעות ביטוח ועובדי מחלקת החיוב
+
+![Claims](stage_1/SystemSpecification/screen3.jpeg)
+
+## תרשים ERD
+
 ![ERD](stage_1/Diagrams/ERD.png)
 
-## DSD Diagram
+## תרשים DSD
+
 ![DSD](stage_1/Diagrams/DSD.png)
 
-## Design Decisions
+## החלטות תכנון
 
-- The Invoice table is separated from Invoice_Item to support multiple services per invoice.
-- Payments and Refunds are separated to allow tracking financial transactions accurately.
-- Insurance claims are linked to invoices to manage coverage.
-- Billing staff roles are stored separately for flexibility and normalization.
+* טבלת `Invoice` מופרדת מטבלת `Invoice_Item` על מנת לאפשר מספר שירותים ופריטים עבור אותה חשבונית.
+* טבלאות `Payments` ו-`Refunds` מופרדות לצורך מעקב מדויק אחר תנועות פיננסיות.
+* תביעות הביטוח מקושרות לחשבוניות לצורך ניהול הכיסוי הביטוחי.
+* תפקידי עובדי מחלקת החיוב נשמרים בנפרד לצורך גמישות ונרמול בסיס הנתונים.
 
-## Data Insertion Methods
+## שיטות הזנת נתונים
 
-Three methods were used to insert data:
+נעשה שימוש בשלוש שיטות להזנת נתונים:
 
-1. Manual SQL INSERT statements
-![Insert SQL](images/insert.png)
+1. פקודות `INSERT` ידניות ב-SQL
+   ![Insert SQL](images/insert.png)
 
-2.Programming
-![Program](images/generate.png)
+2. באמצעות תכנות
+   ![Program](images/generate.png)
 
-3. Data Import Files
-![Data Import Files](images/CSV.png)
+3. קבצי ייבוא נתונים
+   ![Data Import Files](images/CSV.png)
 
-## Backup and Restore
+## גיבוי ושחזור
 
 ![Backup and Restore](backupRestore.png)
 
